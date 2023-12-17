@@ -38,7 +38,7 @@ Build and Compile: Jenkins is responsible for building the application from the 
 It compiles the code, resolves dependencies, and creates executable artifacts.
 Automated Testing: Jenkins facilitates automated testing by running unit tests, integration tests, and any other specified testing suites. 
 It provides feedback on the code quality and identifies potential issues early in the development process.
-## Used Plugins:
+**Used Plugins:**
 GitHub Integration: Use the "GitHub Integration" or "GitHub Webhook" plugin to trigger the CI/CD pipeline on code changes pushed to the GitHub repository.
 
 Docker Plugin: Integrate the "Docker" plugin to build and push Docker images. This allows Jenkins to work seamlessly with Docker for containerization.
@@ -68,29 +68,27 @@ The pipeline sends the codebase to SonarQube, which then performs the analysis a
 Jenkins CI/CD pipeline is a key element in modern software development, enabling automation of the software delivery process.
 Continuous Integration (CI) and Continuous Delivery (CD):
 
-CI Phase:
+**CI Phase:**
 
-Code Repository Integration:
+**Code Repository Integration:**
 The Jenkins CI/CD pipeline starts with integration with a version control system, commonly Git (GitHub in this case). Jenkins monitors the repository for changes.
-Automated Builds: 
+**Automated Builds:**
 Upon detecting changes, Jenkins initiates the build process. This involves fetching the latest source code, compiling it, and generating artifacts.
 Jenkins uses build tools like Maven or Gradle based on project requirements.
-Unit Testing: 
+**Unit Testing:**
 After the build, Jenkins executes unit tests to ensure that individual components of the application function as expected. This phase helps catch errors early in the development process.
-Code Quality Analysis:
+**Code Quality Analysis:**
 Jenkins integrates with tools like SonarQube to perform static code analysis, identifying code smells, bugs, and security vulnerabilities.
 Artifact Archiving: The resulting artifacts from the build are archived for later use in deployment stages.
 
-CD Phase:
+**CD Phase:**
 
-Deployment to Staging:
+**Deployment to Staging:**
 Jenkins deploys the application to a staging environment for additional testing. This environment closely resembles the production environment.
-Automated Testing (Integration and Acceptance): 
+**Automated Testing (Integration and Acceptance):** 
 The pipeline runs integration tests to verify the correct functioning of the integrated system. Acceptance tests may also be conducted to ensure that the application meets business requirements.
-Quality Gates:
-Jenkins incorporates quality gates, ensuring that specific criteria (e.g., code quality thresholds) must be met for the deployment to proceed. If criteria are not met, the pipeline may be halted, preventing the release of suboptimal code.
-Deployment to Production:
+**Deployment to Production:**
 After successful testing in the staging environment, Jenkins deploys the application to the production environment. This stage may involve blue-green deployments or canary releases for minimizing user impact.
-Rollback Mechanism:
+**Rollback Mechanism:**
 A rollback mechanism is in place to revert to the previous version in case issues arise post-deployment.
 
